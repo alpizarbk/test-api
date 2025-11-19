@@ -1,5 +1,5 @@
 #----------------BUILD-----------------
-FROM oven/bun:1.0.23-slim as base
+FROM oven/bun:1.0.23-slim AS base
 WORKDIR /app
 
 COPY ./src ./src
@@ -9,7 +9,7 @@ COPY jsconfig.json ./
 RUN bun install
 
 #----------------RELEASE-----------------
-FROM oven/bun:1.0.23-slim as release
+FROM oven/bun:1.0.23-slim AS release
 COPY --from=base /app/ ./
 
 ARG NODE_ENV
