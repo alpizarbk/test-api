@@ -7,7 +7,7 @@ variables:
   NODE_ENV: 'prod'
   NODE_PORT: '3001'
   IMAGE_NAME: 'test-api'
-  ACR_NAME: 'karla'
+  ACR_NAME: 'registryConnection'
   TAG: '1.0.0'
 
 pool:
